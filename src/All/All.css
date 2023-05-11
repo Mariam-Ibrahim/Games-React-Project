@@ -1,0 +1,18 @@
+.bgcolor{
+    background-color: #272b30;
+    
+}
+.cardbg{
+    background-color: #2e3339!important;
+    /* transition: all 1s; */
+}
+.cardhov{
+    transition: all .5s;
+
+}
+.cardhov:hover{
+    transform: scale(1.05);
+}
+.fontweight{
+    font-size: .7rem;
+}
