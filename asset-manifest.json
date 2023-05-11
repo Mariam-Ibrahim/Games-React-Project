@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/Games-React-Project/static/css/main.7f18e3cc.css",
+    "main.js": "/Games-React-Project/static/js/main.752468a7.js",
+    "static/js/787.4c377892.chunk.js": "/Games-React-Project/static/js/787.4c377892.chunk.js",
+    "static/media/fa-solid-900.ttf": "/Games-React-Project/static/media/fa-solid-900.4a2cd718d7031b732e76.ttf",
+    "static/media/paladins.png": "/Games-React-Project/static/media/paladins.b44d33d6e7ee1ba8.0fddd1fbe0a5e0a0af93.png",
+    "static/media/gaming.jpg": "/Games-React-Project/static/media/gaming.ebaf2ffc84f4451d.d5751ff804c935b205d3.jpg",
+    "static/media/fa-brands-400.ttf": "/Games-React-Project/static/media/fa-brands-400.150de8eaa454d669c405.ttf",
+    "static/media/logo (1).png": "/Games-React-Project/static/media/logo (1).548dc5719c2345c22eef.png",
+    "static/media/fa-solid-900.woff2": "/Games-React-Project/static/media/fa-solid-900.bb975c966c37455a1bc3.woff2",
+    "static/media/fa-brands-400.woff2": "/Games-React-Project/static/media/fa-brands-400.e033a13ee751afc1860c.woff2",
+    "static/media/fa-regular-400.ttf": "/Games-React-Project/static/media/fa-regular-400.d87474231f4192884802.ttf",
+    "static/media/fa-regular-400.woff2": "/Games-React-Project/static/media/fa-regular-400.3223dc79c1adee56370b.woff2",
+    "static/media/fa-v4compatibility.ttf": "/Games-React-Project/static/media/fa-v4compatibility.0e3a648be390bd8cb094.ttf",
+    "static/media/fa-v4compatibility.woff2": "/Games-React-Project/static/media/fa-v4compatibility.68577e40f3e70067b5da.woff2",
+    "index.html": "/Games-React-Project/index.html",
+    "main.7f18e3cc.css.map": "/Games-React-Project/static/css/main.7f18e3cc.css.map",
+    "main.752468a7.js.map": "/Games-React-Project/static/js/main.752468a7.js.map",
+    "787.4c377892.chunk.js.map": "/Games-React-Project/static/js/787.4c377892.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7f18e3cc.css",
+    "static/js/main.752468a7.js"
+  ]
+}
