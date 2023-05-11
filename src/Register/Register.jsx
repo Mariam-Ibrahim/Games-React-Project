@@ -59,10 +59,10 @@ export default function Register() {
       <div className='bgcolor pb-5 '>
         <div className='container pb-5 mb-5'>
           <div className='row pt-5 g-0 pb-5 mb-5 align-items-stretch '>
-            <div className='col-6  '>
+            <div className='col-lg-6 col-sm-12 col-md-6  '>
               <img src={GamesImg} alt=""  className='w-100 h-100'/>
             </div>
-            <div className='col-6 bgsec  '>
+            <div className='col-lg-6 col-sm-12 col-md-6 bgsec  '>
 
               <h2 className='text-center text-muted h4 pt-3 '>Create My Account!</h2>
   <div className='d-flex justify-content-center align-items-center'>
@@ -87,7 +87,7 @@ export default function Register() {
             </form>
   </div>
   
-  <div className='text-center py-2'><span className='text-muted pe-2'>Already a member?</span><Link to="/"  className='text-decoration-none '>LogIn</Link></div>
+  <div className='text-center pt-2 pb-4'><span className='text-muted pe-2'>Already a member?</span><Link to="/"  className='text-decoration-none '>LogIn</Link></div>
   
   
             </div>

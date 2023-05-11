@@ -80,7 +80,7 @@ export default function Navbar({userData , logOut}) {
  :    <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
 
  <li className="nav-item">
-   <a className="nav-link text-white" >LogIn</a>
+   <Link className="nav-link text-white" to='login' >LogIn</Link>
  </li>
 
  <li className="nav-item">

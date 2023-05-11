@@ -39,7 +39,7 @@ export default function Categories() {
     {myArray?    <div className='container pt-5'>
         <div className='row g-4'>
         {myArray.map((el,i)=>{
-          return           <div className="col-3  mycol clickonme"  id="selectmycol" key={i}>
+          return           <div className="col-lg-3 col-md-6 col-sm-12  mycol clickonme"  id="selectmycol" key={i}>
                           <Link to={'/details/' + el.id} className='text-decoration-none'>
 
                           <div className="item card  cardbg outercard shadow-lg border-0 cardhov" >
@@ -64,7 +64,7 @@ export default function Categories() {
           <div><i className="fa-solid fa-square-plus text-muted px-2"></i></div>
           <div>
               <span className="text-dark fw-bold bg-secondary rounded px-3 fontweight smallfont">{el.genre}</span>
-{el.platform=="PC (Windows)"?<i class="fa-brands fa-windows text-muted px-2"></i>:<i class="fa-solid fa-window-maximize text-muted px-2"></i>}
+{el.platform=="PC (Windows)"?<i className="fa-brands fa-windows text-muted px-2"></i>:<i className="fa-solid fa-window-maximize text-muted px-2"></i>}
               </div>
           </div>
           </div>

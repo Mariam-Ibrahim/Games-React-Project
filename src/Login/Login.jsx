@@ -55,18 +55,18 @@ if (data.message=="success"){
   return (
     <div className='bgcolor pb-5 '>
       <div className='container pb-5 mb-5'>
-        <div className='row pt-5 g-0 pb-5 mb-5 '>
-          <div className='col-6'>
-            <img src={GamesImg} alt=""  className='w-100'/>
+        <div className='row pt-5 g-0 pb-5 mb-5 align-items-strech'>
+          <div className='col-lg-6 col-sm-12 col-md-6'>
+            <img src={GamesImg} alt=""  className='w-100 h-100'/>
           </div>
-          <div className='col-6 bgsec  '>
+          <div className='col-lg-6 col-sm-12 col-md-6 bgsec  '>
             <div className='col-2 mx-auto pt-5'>
               <img src={logo} alt="" className='w-100' />
               
             </div>
             <h2 className='text-center text-muted h4'>Log in to GameOver</h2>
 <div className='d-flex justify-content-center align-items-center'>
-<form className=' col-9 border-bottom pb-2' onSubmit={formik.handleSubmit}>
+<form className=' col-9  border-bottom pb-2' onSubmit={formik.handleSubmit}>
             <input type="email" name='email' className='form-control mb-2' placeholder='Email' onChange={formik.handleChange} />
             <p className='text-danger'>{formik.errors.email}</p>
             <input type="password" name='password' className='form-control mb-2' placeholder='Password' onChange={formik.handleChange}/>
@@ -80,7 +80,7 @@ if (data.message=="success"){
 </div>
 
   {/* <div className='text-center pt-4'><a href="" className='text-center text-decoration-none  h6'>Forgot Password?</a></div> */}
-<div className='text-center pt-3'><span className='text-muted pe-2'>Not a member yet?</span><Link to="register"  className='text-decoration-none '>create account</Link></div>
+<div className='text-center pt-3 pb-5'><span className='text-muted pe-2'>Not a member yet?</span><Link to="register"  className='text-decoration-none '>create account</Link></div>
 
 
           </div>

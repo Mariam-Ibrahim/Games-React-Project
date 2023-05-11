@@ -58,8 +58,8 @@ export default function Details() {
 
 <div className='bgcolor'>
   {obj?<div className='container pt-5  '  >
-      <div className='row g-3 ' >
-        <div className='col-4'>
+      <div className='row g-5 ' >
+        <div className='col-lg-4 col-md-12'>
           <img src={obj.thumbnail} alt="" className='w-100 rounded' />
           <div className='d-flex justify-content-between pt-2'>
             <div><button className='btn btn-dark'>FREE</button></div>
@@ -67,7 +67,7 @@ export default function Details() {
 
           </div>
         </div>
-        <div className='col-8'>
+        <div className='col-lg-8 col-md-12'>
           <h2 className='h2 fw-bold text-muted '>{obj.title}</h2>
           <h2 className='h4 text-muted'>About {obj.title}</h2>
           <p className='text-muted h6'>{obj.description}</p>
