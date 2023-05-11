@@ -53,7 +53,7 @@ function ProtectedRouting(props){
   {path:'categories/:x' , element : <ProtectedRouting><Categories/></ProtectedRouting>},
   {path:'sortby/:x' , element : <ProtectedRouting><Sortby/></ProtectedRouting>},
   {path:'details/:x' , element : <ProtectedRouting><Details/></ProtectedRouting>},
-  {path:"*" , element :<Notfound/>}
+  {path:"*" , element :<Login/>}
 
 
 
