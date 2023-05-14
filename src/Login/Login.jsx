@@ -33,7 +33,7 @@ let formik = useFormik ({
 })
 async function loginApi(loginData){
   setFlag(false)
-let {data}= await axios.post("https://route-ecommerce.onrender.com/api/v1/auth/signin" , loginData ).catch((x)=>{
+let {data}= await axios.post("https://sticky-note-fe.vercel.app/signin" , loginData ).catch((x)=>{
   console.log(x.response.data.message);
   setError(x.response.data.message)
   setFlag(true)

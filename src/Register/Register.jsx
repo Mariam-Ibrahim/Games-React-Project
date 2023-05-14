@@ -14,20 +14,21 @@ export default function Register() {
     let[flag,setFlag]=useState(true)
   
   let validate = yup.object({
-    name:yup.string().required().matches(/^[A-Z][a-zA-Z0-9 _]{5,15}$/,"name must start with Uppercase letter , not less than 5 characters"),
+    first_name:yup.string().required().matches(/^[A-Z][a-zA-Z0-9 _]{2,7}$/,"First Name must start with Uppercase letter , not less than 2 characters"),
+    last_name:yup.string().required().matches(/^[A-Z][a-zA-Z0-9 _]{2,7}$/,"Last Name must start with Uppercase letter , not less than 2 characters"),
+
     email:yup.string().required().email("enter a valid email").matches(/^[a-zA-Z0-9_-]{5,20}@[a-z]{3,10}\.(com)$/,"enter a valid email"),
     password:yup.string().required().matches(/^[A-Z][a-zA-Z0-9_@$]{7,15}$/, "enter a valid password"),
-    rePassword:yup.string().required().oneOf([yup.ref ("password")],"must match the first password"),
-    phone:yup.string().required().matches(/^(010|011|012|015)[0-9]{8}$/, "enter a valid number")
+    age:yup.string().required().matches(/^[1-9][0-9]$/, "enter your true age")
   })
   
   let formik = useFormik ({
     initialValues:{
       email:"",
-      name:"",
+      first_name:"",
       password:"",
-      rePassword:"",
-      phone:""
+      last_name:"",
+      age:""
     },
     onSubmit:(values)=>{
       loginApi(values)
@@ -37,7 +38,7 @@ export default function Register() {
   })
   async function loginApi(loginData){
     setFlag(false)
-  let {data}= await axios.post("https://route-ecommerce.onrender.com/api/v1/auth/signup" , loginData ).catch((x)=>{
+  let {data}= await axios.post("https://sticky-note-fe.vercel.app/signup" , loginData ).catch((x)=>{
     console.log(x);
     setError(x.response.data.message)
     setFlag(true)
@@ -67,17 +68,18 @@ export default function Register() {
               <h2 className='text-center text-muted h4 pt-3 '>Create My Account!</h2>
   <div className='d-flex justify-content-center align-items-center'>
   <form className=' col-9 border-bottom pb-2' onSubmit={formik.handleSubmit}>
-  <input type="text" name='name' className='form-control mb-2' placeholder='name' onChange={formik.handleChange} />
-              <p className='text-danger'>{formik.errors.name}</p>
+  <input type="text" name='first_name' className='form-control mb-2' placeholder='first name' onChange={formik.handleChange} />
+              <p className='text-danger'>{formik.errors.first_name}</p>
+              <input type="text" name='last_name' className='form-control mb-2' placeholder='last name' onChange={formik.handleChange} />
+              <p className='text-danger'>{formik.errors.last_name}</p>
 
               <input type="email" name='email' className='form-control mb-2 ' placeholder='Email' onChange={formik.handleChange} />
               <p className='text-danger'>{formik.errors.email}</p>
               <input type="password" name='password' className='form-control mb-2' placeholder='Password' onChange={formik.handleChange}/>
               <p className='text-danger'>{formik.errors.password}</p>
-              <input type="password" name='rePassword' className='form-control mb-2' placeholder='repassword' onChange={formik.handleChange}/>
-              <p className='text-danger'>{formik.errors.rePassword}</p>
-              <input type="text" name='phone' className='form-control mb-2' placeholder='phone' onChange={formik.handleChange}/>
-              <p className='text-danger'>{formik.errors.phone}</p>
+
+              <input type="text" name='age' className='form-control mb-2' placeholder='age' onChange={formik.handleChange}/>
+              <p className='text-danger'>{formik.errors.age}</p>
               
   {flag?            <button type='submit' className='btn bgsec border-dark text-white col-12 '>SignUp</button>
   :            <button type='button' className='btn bgsec border-dark  col-12 '><i className='fa-solid fa-spinner fa-spin text-white'></i></button>
