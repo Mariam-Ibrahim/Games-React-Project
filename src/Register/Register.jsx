@@ -17,7 +17,7 @@ export default function Register() {
     first_name:yup.string().required().matches(/^[A-Z][a-zA-Z0-9 _]{2,7}$/,"First Name must start with Uppercase letter , not less than 2 characters"),
     last_name:yup.string().required().matches(/^[A-Z][a-zA-Z0-9 _]{2,7}$/,"Last Name must start with Uppercase letter , not less than 2 characters"),
 
-    email:yup.string().required().email("enter a valid email").matches(/^[a-zA-Z0-9_-]{5,20}@[a-z]{3,10}\.(com)$/,"emails has to contain at least 5 characters , and you can only use [Upper/Lower cases, Numbers ,- , _]"),
+    email:yup.string().required().email("at least 5 characters , and you can only use [Upper/Lower cases, Numbers ,- , _] then @example.com").matches(/^[a-zA-Z0-9_-]{5,20}@[a-z]{3,10}\.(com)$/,"emails has to contain at least 5 characters , and you can only use [Upper/Lower cases, Numbers ,- , _]"),
     password:yup.string().required().matches(/^[A-Z][a-zA-Z0-9_@$]{7,15}$/, "password has to start with an upper case followed by at least 7 characters"),
     age:yup.string().required().matches(/^[1-9][0-9]$/, "enter your true age")
   })
