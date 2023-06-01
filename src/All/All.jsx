@@ -21,8 +21,8 @@ async function getAll(){
     }
   };
   let {data}= await axios.get('https://free-to-play-games-database.p.rapidapi.com/api/games', options)
-  console.log("my resp");
-console.log(data)
+  // console.log("my resp");
+// console.log(data)
 setArray(data)
 }
   

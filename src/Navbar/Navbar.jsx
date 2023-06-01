@@ -4,7 +4,7 @@ import './Navbar.css'
 import { Link } from 'react-router-dom'
 
 export default function Navbar({userData , logOut}) {
-  console.log("navbarprop" , userData);
+  // console.log("navbarprop" , userData);
   return (
 
     <div >

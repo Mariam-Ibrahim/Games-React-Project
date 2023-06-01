@@ -9,8 +9,8 @@ import { Link, useNavigate } from 'react-router-dom'
 import jwtDecode from 'jwt-decode'
 
 
-export default function Login(props) {
-  console.log(props);
+export default function Login({changeStatus}) {
+  // console.log(changeStatus);
   let navigate=useNavigate()
   let [dataError,setError]=useState(null)
   let[flag,setFlag]=useState(true)
@@ -33,20 +33,20 @@ let formik = useFormik ({
 })
 async function loginApi(loginData){
   setFlag(false)
-let {data}= await axios.post("https://sticky-note-fe.vercel.app/signin" , loginData ).catch((x)=>{
-  console.log(x.response.data.message);
+let {data}= await axios.post("https://route-ecommerce.onrender.com/api/v1/auth/signin" , loginData ).catch((x)=>{
+  // console.log(x.response.data.message);
   setError(x.response.data.message)
   setFlag(true)
 
 })
-console.log(data);
+// console.log(data);
 
 if (data.message=="success"){
   setFlag(true)
-  props.NewFunc(data.token)
+  changeStatus(data.token)
   navigate ('/all')
   let Mytoken= jwtDecode(data.token)
-  console.log("my token" ,Mytoken);
+  // console.log("my token" ,Mytoken);
   localStorage.setItem("token", Mytoken)
 
 }

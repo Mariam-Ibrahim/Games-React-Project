@@ -45,7 +45,7 @@ function ProtectedRouting(props){
 
   let routes = createBrowserRouter([
     {path:"",element: <Frame userData={userData} logOut={logOut} /> , children:[
-  {index:true , element: <Login NewFunc={changeStatus}/>},
+  {index:true , element: <Login changeStatus={changeStatus}/>},
   {path:'register' , element :<Register/>},
   {path:'home' , element : <ProtectedRouting><Home/></ProtectedRouting>},
   {path:'all' , element :<ProtectedRouting><All/></ProtectedRouting> },
