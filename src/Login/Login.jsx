@@ -17,7 +17,7 @@ export default function Login({changeStatus}) {
 
 let validate = yup.object({
   email:yup.string().required().email("enter a valid email"),
-  password:yup.string().required().matches(/^[A-Z][a-zA-Z0-9_@$]{7,15}$/, "enter a valid password")
+  password:yup.string().required().matches(/^[a-zA-Z0-9_@$]{7,15}$/, "enter a valid password")
 })
 
 let formik = useFormik ({
@@ -33,15 +33,15 @@ let formik = useFormik ({
 })
 async function loginApi(loginData){
   setFlag(false)
-let {data}= await axios.post("https://route-ecommerce.onrender.com/api/v1/auth/signin" , loginData ).catch((x)=>{
+let {data}= await axios.post("https://note-keep-6545.vercel.app/user/signin" , loginData ).catch((x)=>{
   // console.log(x.response.data.message);
   setError(x.response.data.message)
   setFlag(true)
 
 })
-// console.log(data);
+ console.log(data);
 
-if (data.message=="success"){
+if (data.success){
   setFlag(true)
   changeStatus(data.token)
   navigate ('/all')
